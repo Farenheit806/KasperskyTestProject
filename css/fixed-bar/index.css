@@ -10,6 +10,7 @@
   width: 922px;
   background-color: #ffffff;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
 }
 .phone-arrow {
