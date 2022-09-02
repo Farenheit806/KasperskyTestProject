@@ -1,0 +1,50 @@
+.covers {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  flex-grow: 1;
+}
+.covers p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.covers > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 12px;
+}
+.covers > ul li {
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+}
+@media ((min-width: 752px) and (max-width: 1125px)) {
+  .covers {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 751px) {
+  .covers {
+    order: 2;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .covers p {
+    justify-content: center;
+  }
+  .covers > ul {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,96 @@
+.selectors {
+  display: flex;
+  gap: 12px;
+}
+.selector {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  gap: 9px;
+}
+.selector label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--secondary);
+  text-transform: capitalize;
+}
+.selector select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: var(--white);
+  color: var(--primary);
+  cursor: pointer;
+  outline: none;
+
+  border: 1.5px solid var(--green-teal);
+  border-radius: 4px;
+
+  width: 97px;
+  height: 48px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.selector::after {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  display: block;
+  width: 5px;
+  aspect-ratio: 1;
+  border: solid black;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+  content: "";
+  pointer-events: none;
+}
+.selector p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--grey-3);
+}
+
+@media ((min-width: 752px) and (max-width: 1125px)) {
+  .selectors {
+    flex-direction: column;
+  }
+  .selector label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .selector p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .selector::after {
+    top: 50px;
+    right: 8px;
+  }
+  .fixed-bar[stuck] .selector::after {
+    top: 20px;
+    right: 8px;
+  }
+  .fixed-bar[stuck] .selector {
+    flex-direction: row;
+  }
+
+  .fixed-bar[stuck] .selector p {
+    position: absolute;
+    top: 28px;
+    left: 0;
+  }
+  .fixed-bar[stuck] .selector label {
+    padding-right: 16px;
+  }
+}
+@media (max-width: 751px) {
+  .selectors {
+    padding-top: 16px;
+    justify-content: center;
+  }
+}

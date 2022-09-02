@@ -1,0 +1,68 @@
+@import url("breadcrumb.css");
+@import url("masterhead/index.css");
+@import url("fixed-bar/index.css");
+
+/* vars */
+:root {
+  --arrow: #666666;
+  --secondary: #444444;
+  --primary: #1d1d1b;
+  --yellow: #ffed40;
+  --grey-1: #aeaeae;
+  --grey-2: #cccccc;
+  --grey-3: #999999;
+  --grey-4: #375050;
+  --green-teal: #23d1ae;
+  --red: #ff3748;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: KasperskySans, MuseoSans, Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  background-image: url("/img/bg-image.png");
+  background-repeat: no-repeat;
+  background-position: top right -240px;
+
+  height: 2000px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1177px;
+  padding: 0 16px;
+  height: 100%;
+}
+
+.question-btn {
+  height: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+main {
+  height: 100%;
+}
+
+@media ((min-width: 752px) and (max-width: 1125px)) {
+  .wrapper {
+    background-size: 450px;
+    background-position: top 100px right -100px;
+  }
+}
+@media (max-width: 751px) {
+  .wrapper {
+    background-position: top left 100px;
+    background-size: 300px;
+  }
+  .container {
+    width: 100vw;
+  }
+  header {
+    display: none;
+  }
+}

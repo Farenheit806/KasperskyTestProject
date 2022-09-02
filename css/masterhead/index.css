@@ -1,0 +1,20 @@
+@import url("product-logo.css");
+@import url("content.css");
+
+.masterhead {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 571px;
+
+  margin-top: 24px;
+}
+
+@media (max-width: 751px) {
+  .masterhead {
+    padding-top: 160px;
+    margin-top: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,80 @@
+.auto-renewal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 0 16px 28px;
+  padding-left: 28px;
+}
+
+.auto-renewal label {
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4);
+  user-select: none;
+  cursor: pointer;
+}
+
+.auto-renewal input {
+  position: absolute;
+  left: 24px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+.checkmark {
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background: #eee;
+  border-radius: 3px;
+}
+
+.auto-renewal input:hover ~ .checkmark {
+  background-color: #ccc;
+}
+
+.auto-renewal input:checked ~ .checkmark {
+  background-color: var(--green-teal);
+}
+
+.checkmark::after {
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  width: 5px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: none;
+  content: "";
+}
+
+.auto-renewal input:checked ~ .checkmark::after {
+  display: block;
+}
+
+@media ((min-width: 752px) and (max-width: 1125px)) {
+  .auto-renewal {
+    justify-content: flex-end;
+  }
+  .auto-renewal input {
+    left: 84px;
+  }
+  .checkmark {
+    left: 81px;
+  }
+}
+@media (max-width: 751px) {
+  .auto-renewal input {
+    left: 23px;
+  }
+}
